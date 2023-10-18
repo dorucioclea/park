@@ -14,6 +14,7 @@ const fields: Array<keyof UpdateCustomer> = [
   "name",
   "created_at",
   "updated_at",
+  "email",
 ];
 
 export default function UpdateCustomers({
@@ -228,6 +229,40 @@ export default function UpdateCustomers({
           <input
             type="text"
             id="updated_at"
+            style={{
+              marginTop: "10px",
+              background: "#000",
+              color: "#fff",
+              border: "1px solid #34383A",
+              marginLeft: "10px",
+              flex: "1",
+              borderRadius: "0.375rem",
+              padding: "4px 16px",
+            }}
+          />
+        </div>
+
+        <div className="flex items-center">
+          <label
+            htmlFor="email"
+            style={{
+              flexBasis: "200px",
+              marginRight: "10px",
+            }}
+          >
+            email
+          </label>
+          <label
+            htmlFor="email"
+            style={{
+              flexBasis: "200px",
+            }}
+          >
+            character varying
+          </label>
+          <input
+            type="text"
+            id="email"
             style={{
               marginTop: "10px",
               background: "#000",
