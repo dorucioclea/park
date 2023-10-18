@@ -2145,6 +2145,83 @@ export interface Database {
   };
   public: {
     Tables: {
+      customers: {
+        Row: {
+          created_at: string | null;
+          id: string;
+          name: string | null;
+          updated_at: string | null;
+        };
+        Insert: {
+          created_at?: string | null;
+          id?: string;
+          name?: string | null;
+          updated_at?: string | null;
+        };
+        Update: {
+          created_at?: string | null;
+          id?: string;
+          name?: string | null;
+          updated_at?: string | null;
+        };
+        Relationships: [];
+      };
+      order_items: {
+        Row: {
+          id: string;
+          order_id: string | null;
+          product_id: string | null;
+          quantity: number | null;
+        };
+        Insert: {
+          id?: string;
+          order_id?: string | null;
+          product_id?: string | null;
+          quantity?: number | null;
+        };
+        Update: {
+          id?: string;
+          order_id?: string | null;
+          product_id?: string | null;
+          quantity?: number | null;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "order_items_order_id_fkey";
+            columns: ["order_id"];
+            referencedRelation: "orders";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
+      orders: {
+        Row: {
+          customer_id: string | null;
+          id: string;
+          order_date: string | null;
+          status: string | null;
+        };
+        Insert: {
+          customer_id?: string | null;
+          id?: string;
+          order_date?: string | null;
+          status?: string | null;
+        };
+        Update: {
+          customer_id?: string | null;
+          id?: string;
+          order_date?: string | null;
+          status?: string | null;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "orders_customer_id_fkey";
+            columns: ["customer_id"];
+            referencedRelation: "customers";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
       warehouse_inventory: {
         Row: {
           id: string;

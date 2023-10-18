@@ -1,5 +1,29 @@
 [
   {
+    "name": "useOrderItems",
+    "location": "../web/__backengine__/hooks/useOrderItems.ts",
+    "type": "HOOK",
+    "entityType": "TABLE",
+    "entityName": "order_items",
+    "usage": "const { orderItems, fetchOrderItems, createOrderItem, updateOrderItem, deleteOrderItem } = useOrderItems();"
+  },
+  {
+    "name": "useOrders",
+    "location": "../web/__backengine__/hooks/useOrders.ts",
+    "type": "HOOK",
+    "entityType": "TABLE",
+    "entityName": "orders",
+    "usage": "const { orders, fetchOrders, createOrder, updateOrder, deleteOrder } = useOrders();"
+  },
+  {
+    "name": "useCustomers",
+    "location": "../web/__backengine__/hooks/useCustomers.ts",
+    "type": "HOOK",
+    "entityType": "TABLE",
+    "entityName": "customers",
+    "usage": "const { customers, fetchCustomers, createCustomer, updateCustomer, deleteCustomer } = useCustomers();"
+  },
+  {
     "name": "useWarehouseInventories",
     "location": "../web/__backengine__/hooks/useWarehouseInventories.ts",
     "type": "HOOK",
