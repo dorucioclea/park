@@ -8,6 +8,14 @@
     "usage": "const { orderItems, fetchOrderItems, createOrderItem, updateOrderItem, deleteOrderItem } = useOrderItems();"
   },
   {
+    "name": "useProducts",
+    "location": "../web/__backengine__/hooks/useProducts.ts",
+    "type": "HOOK",
+    "entityType": "TABLE",
+    "entityName": "products",
+    "usage": "const { products, fetchProducts, createProduct, updateProduct, deleteProduct } = useProducts();"
+  },
+  {
     "name": "useOrders",
     "location": "../web/__backengine__/hooks/useOrders.ts",
     "type": "HOOK",

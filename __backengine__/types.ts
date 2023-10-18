@@ -2225,6 +2225,30 @@ export interface Database {
           },
         ];
       };
+      products: {
+        Row: {
+          id: string;
+          name: string | null;
+          number_in_stock: number | null;
+          price: number | null;
+          product_id: string | null;
+        };
+        Insert: {
+          id?: string;
+          name?: string | null;
+          number_in_stock?: number | null;
+          price?: number | null;
+          product_id?: string | null;
+        };
+        Update: {
+          id?: string;
+          name?: string | null;
+          number_in_stock?: number | null;
+          price?: number | null;
+          product_id?: string | null;
+        };
+        Relationships: [];
+      };
       warehouse_inventory: {
         Row: {
           id: string;
