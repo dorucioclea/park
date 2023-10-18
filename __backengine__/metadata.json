@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "name": "useWarehouseInventories",
+    "location": "../web/__backengine__/hooks/useWarehouseInventories.ts",
+    "type": "HOOK",
+    "entityType": "TABLE",
+    "entityName": "warehouse_inventory",
+    "usage": "const { warehouseInventories, fetchWarehouseInventories, createWarehouseInventory, updateWarehouseInventory, deleteWarehouseInventory } = useWarehouseInventories();"
+  }
+]
